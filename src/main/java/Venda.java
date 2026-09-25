@@ -1,9 +1,9 @@
 import java.util.List;
 
 public class Venda {
-    Cliente cliente;
-    Pagamento pagamento;
-    List<ItemVenda> itens;
+    private Cliente cliente;
+    private Pagamento pagamento;
+    private List<ItemVenda> itens;
 
     public Venda(Cliente cliente, Pagamento pagamento, List<ItemVenda> itens) {
         this.cliente = cliente;
@@ -16,7 +16,7 @@ public class Venda {
         for (ItemVenda item : itens) {
             total += item.calcularSubtotal();
         }
-        if (cliente.assinatura.equals("premium")) {
+        if (cliente.getAssinatura().equals("premium")) {
             total *= 0.95;
         }
         return total;

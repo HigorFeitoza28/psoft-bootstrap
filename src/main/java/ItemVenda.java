@@ -1,6 +1,6 @@
 public class ItemVenda {
-    Produto produto;
-    int quantidade;
+    private Produto produto;
+    private int quantidade;
 
     public ItemVenda(Produto produto, int quantidade) {
         this.produto = produto;
@@ -8,7 +8,7 @@ public class ItemVenda {
     }
 
     public double calcularSubtotal() {
-        double subtotal = produto.valor * quantidade;
+        double subtotal = produto.getValor() * quantidade;
         if (quantidade >= 20) {
             subtotal *= 0.90;
         }

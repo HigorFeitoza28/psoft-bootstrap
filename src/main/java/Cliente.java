@@ -1,10 +1,14 @@
 public class Cliente {
-    int id;
-    String assinatura;
+    private int id;
+    private String assinatura;
 
     public Cliente(int id) {
         this.id = id;
         this.assinatura = "standard";
+    }
+
+    public String getAssinatura() {
+        return assinatura;
     }
 
     public void definirStandard() {
